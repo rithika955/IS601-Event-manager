@@ -38,6 +38,7 @@ def test_verify_password_invalid_hash():
     with pytest.raises(ValueError):
         verify_password("secure_password", "invalid_hash_format")
 
+
 @pytest.mark.parametrize("password", [
     "",
     " ",
