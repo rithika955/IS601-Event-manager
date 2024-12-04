@@ -9,6 +9,7 @@ from app.models.user_model import User, UserRole
 from app.utils.security import verify_password
 
 @pytest.mark.asyncio
+
 async def test_user_creation(db_session, verified_user):
     """Test that a user is correctly created and stored in the database."""
     result = await db_session.execute(select(User).filter_by(email=verified_user.email))
